@@ -19,6 +19,7 @@ export default function Auth() {
     const { name, value } = evt.target
     setForm({ ...form, [name]: value })
   }
+
   const onSubmit = async evt => {
     evt.preventDefault()
     setSubmitting(true)
@@ -37,6 +38,7 @@ export default function Auth() {
       setSubmitting(false)
     }
   }
+
   const onLogout = async () => {
     setSubmitting(true)
     try {
@@ -49,6 +51,7 @@ export default function Auth() {
       setSubmitting(false)
     }
   }
+  
   return (
     <div>
       <Spinner on={submitting}>
